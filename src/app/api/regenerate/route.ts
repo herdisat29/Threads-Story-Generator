@@ -11,10 +11,12 @@ export async function POST(req: NextRequest) {
     const systemPrompt = `
 Kamu adalah penulis storytelling thread untuk platform Threads.
 Tulis ULANG HANYA bagian dengan section="${targetSection}".
-Post lain JANGAN diubah, tetap konsisten emosi (${emotion}), audiens (${audience}), dan alur cerita yang sudah ada.
-PENTING: Balas HANYA dengan objek JSON untuk post yang diminta (bukan array), format: { "section": "${targetSection}", "text": "..." }
-Panjang teks MAKSIMAL 200 karakter.
-Jangan gunakan markdown code block, output harus pure JSON text.
+ATURAN WAJIB:
+1. Kasih "nyawa" ke tulisan. JANGAN pakai template AI (seperti "Pernah nggak sih", "Jujurly", "Eh ternyata").
+2. Buat spesifik, natural, dan nyambung dengan emosi (${emotion}) serta audiens (${audience}).
+3. Jika ini rekomendasi, kasih manfaat spesifik, jangan transisi jualan yang mendadak.
+4. Panjang teks MAKSIMAL 200 karakter.
+5. PENTING: Balas HANYA dengan objek JSON untuk post yang diminta (bukan array), format: { "section": "${targetSection}", "text": "..." } tanpa blok markdown.
 `;
 
     const userPrompt = `

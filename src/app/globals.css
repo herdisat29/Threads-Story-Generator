@@ -85,6 +85,7 @@
 body {
   font-family: 'Inter', sans-serif;
   background-color: #000000;
+  color-scheme: dark;
 }
 
 .material-symbols-outlined {
