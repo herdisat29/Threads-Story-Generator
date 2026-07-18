@@ -8,11 +8,10 @@ export default function Header() {
           <span className="material-symbols-outlined text-primary">menu</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-black rounded-md flex items-center justify-center">
-            {/* Logo placeholder */}
-            <span className="text-white font-bold text-xs">TG</span>
+          <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
+            <span className="material-symbols-outlined text-on-primary text-[20px]">alternate_email</span>
           </div>
-          <h1 className="font-display-lg text-[24px] tracking-tighter text-primary">ThreadsGen</h1>
+          <h1 className="font-display-lg text-[24px] tracking-tighter text-primary font-bold">Threads Story</h1>
         </div>
         <div className="w-8 h-8 rounded-full overflow-hidden border border-border-subtle bg-gray-200 flex items-center justify-center">
           <span className="material-symbols-outlined text-gray-500 text-sm">person</span>

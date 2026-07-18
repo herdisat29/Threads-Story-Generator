@@ -8,7 +8,7 @@ import { AppProvider } from "@/context/AppContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ThreadsGen - Story Generator",
+  title: "Threads Story - Affiliate Generator",
   description: "Generate viral threads easily.",
 };
 
