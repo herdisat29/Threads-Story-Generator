@@ -52,7 +52,8 @@ Tuliskan thread sesuai aturan. HANYA OUTPUT ARRAY JSON.
     const responseText = result.response.text();
     let posts = [];
     try {
-      posts = JSON.parse(responseText);
+      const cleanText = responseText.replace(/```json/gi, "").replace(/```/g, "").trim();
+      posts = JSON.parse(cleanText);
     } catch (e) {
       console.error("Failed to parse Gemini output:", responseText);
       throw new Error("Invalid output format from AI");

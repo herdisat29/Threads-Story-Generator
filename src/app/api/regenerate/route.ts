@@ -36,7 +36,8 @@ ${JSON.stringify(existingThread, null, 2)}
     const responseText = result.response.text();
     let post = null;
     try {
-      post = JSON.parse(responseText);
+      const cleanText = responseText.replace(/```json/gi, "").replace(/```/g, "").trim();
+      post = JSON.parse(cleanText);
     } catch (e) {
       console.error("Failed to parse Gemini output:", responseText);
       throw new Error("Invalid output format from AI");

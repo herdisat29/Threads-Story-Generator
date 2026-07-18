@@ -38,7 +38,8 @@ export default function Home() {
       });
 
       if (!response.ok) {
-        throw new Error("Gagal generate thread");
+        const errData = await response.json().catch(() => ({}));
+        throw new Error(errData.error || "Gagal generate thread");
       }
 
       const generatedThread = await response.json();
