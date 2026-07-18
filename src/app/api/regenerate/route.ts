@@ -23,7 +23,7 @@ ${JSON.stringify(existingThread, null, 2)}
     `;
 
     const model = genAI.getGenerativeModel({
-      model: "gemini-1.5-pro",
+      model: "gemini-1.5-pro-latest",
       generationConfig: {
         responseMimeType: "application/json",
       },
